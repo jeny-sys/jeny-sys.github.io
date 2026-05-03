@@ -1,4 +1,9 @@
-[{"title":"手机远程控制电脑完整教程 — SSH + Tailscale + Termius","date":"2026-05-03","permalink":"https://jeny-sys.github.io/posts/ssh-remote-setup-guide/","summary":"你会得到什么 完成本教程后，你将拥有一个安全、稳定、零成本的远程控制方案：
+[{"title":"SSH 远程访问部署指南（Agent 版）","date":"2026-05-03","permalink":"https://jeny-sys.github.io/posts/ssh-remote-agent-prompt/","summary":" 给 AI Agent 的部署指令。用户将此文件交给 Claude / ChatGPT / Copilot，Agent 会自动完成全部配置。
+任务目标 在 Windows 电脑上配置 SSH 远程访问，并通过 Tailscale 实现外网连接，使用户能从手机（Termius）随时远程控制电脑。
+执行规则 每一步执行前：先用检测命令确认当前状态，避免重复操作 每一步执行后：运行验证命令确认成功，再进 …","content":" 给 AI Agent 的部署指令。用户将此文件交给 Claude / ChatGPT / Copilot，Agent 会自动完成全部配置。
+任务目标 在 Windows 电脑上配置 SSH 远程访问，并通过 Tailscale 实现外网连接，使用户能从手机（Termius）随时远程控制电脑。
+执行规则 每一步执行前：先用检测命令确认当前状态，避免重复操作 每一步执行后：运行验证命令确认成功，再进入下一步 需要管理员权限时：明确告知用户，并给出需要手动执行的命令（带 # MANUAL: admin 标记） 遇到错误时：查阅下方&amp;quot;错误处理&amp;quot;章节，尝试对应解决方案 所有命令必须逐条执行：不要合并多条命令到一行，PowerShell 会因换行截断参数 环境变量 执行前请 Agent 确认或让用户填写：
+WINDOWS_USERNAME = &amp;lt;运行 whoami 的输出，取 \ 后的部分&amp;gt; INSTALL_DIR = C:\ProgramData\OpenSSH SSH_CONFIG_DIR = C:\ProgramData\ssh Tailscale_IP = …"},{"title":"手机远程控制电脑完整教程 — SSH + Tailscale + Termius","date":"2026-05-03","permalink":"https://jeny-sys.github.io/posts/ssh-remote-setup-guide/","summary":"你会得到什么 完成本教程后，你将拥有一个安全、稳定、零成本的远程控制方案：
 随时随地连接：不管电脑在哪，手机有网就能连 端到端加密：WireGuard 协议，不暴露任何端口 完全免费：所有工具均为免费版本，无隐藏收费 前置条件 项目 要求 电脑系统 Windows 10（1809+）或 Windows 11 手机系统 iOS 15+ 或 Android 8+ 网络要求 电脑和手机各自能上网即可（不 …","content":"你会得到什么 完成本教程后，你将拥有一个安全、稳定、零成本的远程控制方案：
 随时随地连接：不管电脑在哪，手机有网就能连 端到端加密：WireGuard 协议，不暴露任何端口 完全免费：所有工具均为免费版本，无隐藏收费 前置条件 项目 要求 电脑系统 Windows 10（1809+）或 Windows 11 手机系统 iOS 15+ 或 Android 8+ 网络要求 电脑和手机各自能上网即可（不需要同一局域网） 管理员权限 安装 OpenSSH 需要管理员 PowerShell 账号准备 一个 Google / Microsoft / Apple / GitHub 账号（用于 Tailscale 登录） 整体架构 整个方案由三个组件组成，各司其职：
 手机 (Termius) → Tailscale (WireGuard 加密隧道) → 电脑 (OpenSSH Server) OpenSSH Server：电脑上的 SSH 服务端，提供远程终端访问能力 Tailscale：虚拟组网工具，让手机和电脑在任意网络下互通 Termius：手机上的 SSH 客户端，提供图形化终端操作界面 第一 …"}]
