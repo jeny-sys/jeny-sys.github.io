@@ -1,0 +1,34 @@
+<!-- layouts/partials/sidebar.html -->
+<aside class="sidebar">
+    <div class="sidebar-section">
+        <h3>关于我</h3>
+        <p>{{ .Site.Params.author }}</p>
+        <p>{{ .Site.Params.description }}</p>
+    </div>
+
+    <div class="sidebar-section">
+        <h3>分类</h3>
+        <ul class="categories-list">
+            {{ range .Site.Taxonomies.categories }}
+            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a></li>
+            {{ end }}
+        </ul>
+    </div>
+
+    <div class="sidebar-section">
+        <h3>标签云</h3>
+        <div class="tag-cloud">
+            {{ range .Site.Taxonomies.tags }}
+            <a href="{{ .Page.Permalink }}" class="tag">{{ .Page.Title }}</a>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="sidebar-section">
+        <h3>链接</h3>
+        <ul class="links-list">
+            <li><a href="https://github.com/yourusername">GitHub</a></li>
+            <li><a href="mailto:your@email.com">邮箱</a></li>
+        </ul>
+    </div>
+</aside>
