@@ -3,16 +3,25 @@
     <section class="home-hero">
         <h1>欢迎来到<span class="highlight">技术博客</span></h1>
         <p class="subtitle">{{ .Site.Params.description }}</p>
+        <div class="hero-stats">
+            <span>{{ len (where .Site.RegularPages "Section" "posts") }} 篇文章</span>
+            <span>{{ len .Site.Taxonomies.categories }} 个分类</span>
+        </div>
     </section>
 
     <h2 class="section-title">最新文章</h2>
-    {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
-    <a href="{{ .Permalink }}" class="post-card">
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ range $i, $p := first 5 $posts }}
+    <a href="{{ .Permalink }}" class="post-card{{ if eq $i 0 }} post-card--featured{{ end }}">
+        {{ if eq $i 0 }}
+        <span class="post-card-badge">最新</span>
+        {{ end }}
         <h3>{{ .Title }}</h3>
         <div class="post-meta-row">
             <time>{{ .Date.Format "2006-01-02" }}</time>
+            {{ with .Params.categories }}<span>{{ index . 0 }}</span>{{ end }}
         </div>
-        <p>{{ .Summary }}</p>
+        <p>{{ .Plain | truncate 100 "…" }}</p>
         {{ if .Params.tags }}
         <div class="tags">
             {{ range .Params.tags }}
@@ -21,6 +30,10 @@
         </div>
         {{ end }}
     </a>
+    {{ end }}
+
+    {{ if gt (len $posts) 5 }}
+    <a href="/posts/" class="view-all">查看全部文章 →</a>
     {{ end }}
 </div>
 {{ end }}

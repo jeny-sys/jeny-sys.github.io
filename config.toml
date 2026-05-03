@@ -6,7 +6,7 @@ title = "个人技术博客"
 
 [params]
   description = "分享编程经验、技术见解和项目成果"
-  author = "Your Name"
+  author = "jeny-sys"
 
 [menu]
   [[menu.main]]
@@ -21,6 +21,10 @@ title = "个人技术博客"
     name = "关于"
     url = "/about/"
     weight = 3
+[[menu.main]]
+    name = "搜索"
+    url = "/search/"
+    weight = 4
 
 [taxonomies]
   category = "categories"
@@ -29,4 +33,8 @@ title = "个人技术博客"
 [markup]
   [markup.highlight]
     style = "monokai"
-    lineNos = true
+    lineNos = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
