@@ -1,20 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>个人技术博客</title><link>https://jeny-sys.github.io/</link><description>Recent content on 个人技术博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 03 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://jeny-sys.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://jeny-sys.github.io/about/</link><pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate><guid>https://jeny-sys.github.io/about/</guid><description>&lt;h1 id="关于我"&gt;关于我&lt;/h1&gt;
-&lt;p&gt;欢迎来到我的个人技术博客！&lt;/p&gt;
-&lt;h2 id="我是谁"&gt;我是谁&lt;/h2&gt;
-&lt;p&gt;我是一名热爱技术的开发者，专注于 [您的专业领域]。&lt;/p&gt;
-&lt;h2 id="我的技能"&gt;我的技能&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;编程语言：[列出您熟悉的编程语言]&lt;/li&gt;
-&lt;li&gt;技术栈：[列出您掌握的技术]&lt;/li&gt;
-&lt;li&gt;工具：[列出您常用的开发工具]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="联系方式"&gt;联系方式&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;GitHub: [您的 GitHub 链接]&lt;/li&gt;
-&lt;li&gt;Email: [您的邮箱地址]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="关于这个博客"&gt;关于这个博客&lt;/h2&gt;
-&lt;p&gt;这个博客是我分享技术见解、编程经验和项目成果的地方。我希望通过写作来记录学习过程，同时也希望能帮助到其他开发者。&lt;/p&gt;</description></item><item><title>手机远程控制电脑完整教程 — SSH + Tailscale + Termius</title><link>https://jeny-sys.github.io/posts/ssh-remote-setup-guide/</link><pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate><guid>https://jeny-sys.github.io/posts/ssh-remote-setup-guide/</guid><description>&lt;h2 id="你会得到什么"&gt;你会得到什么&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tailscale on 个人技术博客</title><link>https://jeny-sys.github.io/tags/tailscale/</link><description>Recent content in Tailscale on 个人技术博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 03 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://jeny-sys.github.io/tags/tailscale/index.xml" rel="self" type="application/rss+xml"/><item><title>手机远程控制电脑完整教程 — SSH + Tailscale + Termius</title><link>https://jeny-sys.github.io/posts/ssh-remote-setup-guide/</link><pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate><guid>https://jeny-sys.github.io/posts/ssh-remote-setup-guide/</guid><description>&lt;h2 id="你会得到什么"&gt;你会得到什么&lt;/h2&gt;
 &lt;p&gt;完成本教程后，你将拥有一个&lt;strong&gt;安全、稳定、零成本&lt;/strong&gt;的远程控制方案：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;随时随地连接&lt;/strong&gt;：不管电脑在哪，手机有网就能连&lt;/li&gt;
@@ -72,4 +56,4 @@
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-WindowsCapability -Online | Where-Object Name &lt;span style="color:#f92672"&gt;-like&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;OpenSSH.Server*&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;如果显示 &lt;code&gt;State : Installed&lt;/code&gt;，跳到第 2 步。如果报错或未安装，按以下方式手动安装：&lt;/p&gt;</description></item><item><title>搜索</title><link>https://jeny-sys.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jeny-sys.github.io/search/</guid><description/></item></channel></rss>
+&lt;/div&gt;&lt;p&gt;如果显示 &lt;code&gt;State : Installed&lt;/code&gt;，跳到第 2 步。如果报错或未安装，按以下方式手动安装：&lt;/p&gt;</description></item></channel></rss>

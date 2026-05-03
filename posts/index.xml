@@ -1,19 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>文章 on 个人技术博客</title>
-    <link>https://jeny-sys.github.io/posts/</link>
-    <description>Recent content in 文章 on 个人技术博客</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sun, 03 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jeny-sys.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>欢迎来到我的技术博客</title>
-      <link>https://jeny-sys.github.io/posts/first-post/</link>
-      <pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://jeny-sys.github.io/posts/first-post/</guid>
-      <description>&lt;h1 id=&#34;欢迎来到我的技术博客&#34;&gt;欢迎来到我的技术博客&lt;/h1&gt;&#xA;&lt;p&gt;这是我的第一篇博客文章。我创建这个博客是为了分享我的编程经验、技术见解和项目成果。&lt;/p&gt;&#xA;&lt;h2 id=&#34;关于这个博客&#34;&gt;关于这个博客&lt;/h2&gt;&#xA;&lt;p&gt;这个博客使用 Hugo 静态站点生成器构建，采用极简主义设计风格。主要特点包括：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;双栏布局&lt;/strong&gt;：左侧导航，右侧内容&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;极简风格&lt;/strong&gt;：大量留白，专注于内容本身&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;响应式设计&lt;/strong&gt;：适配各种设备屏幕&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;技术栈&#34;&gt;技术栈&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Hugo&lt;/strong&gt;：静态站点生成器&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;HTML5/CSS3&lt;/strong&gt;：前端技术&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;：交互功能&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt;：托管服务&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;下一步计划&#34;&gt;下一步计划&lt;/h2&gt;&#xA;&lt;p&gt;我计划在这里分享以下内容：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;编程教程和技术文章&lt;/li&gt;&#xA;&lt;li&gt;项目开发经验&lt;/li&gt;&#xA;&lt;li&gt;技术见解和思考&lt;/li&gt;&#xA;&lt;li&gt;学习笔记和总结&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;感谢您的访问！&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>文章 on 个人技术博客</title><link>https://jeny-sys.github.io/posts/</link><description>Recent content in 文章 on 个人技术博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 03 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://jeny-sys.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>手机远程控制电脑完整教程 — SSH + Tailscale + Termius</title><link>https://jeny-sys.github.io/posts/ssh-remote-setup-guide/</link><pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate><guid>https://jeny-sys.github.io/posts/ssh-remote-setup-guide/</guid><description>&lt;h2 id="你会得到什么"&gt;你会得到什么&lt;/h2&gt;
+&lt;p&gt;完成本教程后，你将拥有一个&lt;strong&gt;安全、稳定、零成本&lt;/strong&gt;的远程控制方案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;随时随地连接&lt;/strong&gt;：不管电脑在哪，手机有网就能连&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;端到端加密&lt;/strong&gt;：WireGuard 协议，不暴露任何端口&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;完全免费&lt;/strong&gt;：所有工具均为免费版本，无隐藏收费&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="前置条件"&gt;前置条件&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;项目&lt;/th&gt;
+ &lt;th&gt;要求&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;电脑系统&lt;/td&gt;
+ &lt;td&gt;Windows 10（1809+）或 Windows 11&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;手机系统&lt;/td&gt;
+ &lt;td&gt;iOS 15+ 或 Android 8+&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;网络要求&lt;/td&gt;
+ &lt;td&gt;电脑和手机各自能上网即可（不需要同一局域网）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;管理员权限&lt;/td&gt;
+ &lt;td&gt;安装 OpenSSH 需要管理员 PowerShell&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;账号准备&lt;/td&gt;
+ &lt;td&gt;一个 Google / Microsoft / Apple / GitHub 账号（用于 Tailscale 登录）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="整体架构"&gt;整体架构&lt;/h2&gt;
+&lt;p&gt;整个方案由三个组件组成，各司其职：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt; 手机 (Termius) → Tailscale (WireGuard 加密隧道) → 电脑 (OpenSSH Server)
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OpenSSH Server&lt;/strong&gt;：电脑上的 SSH 服务端，提供远程终端访问能力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tailscale&lt;/strong&gt;：虚拟组网工具，让手机和电脑在任意网络下互通&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Termius&lt;/strong&gt;：手机上的 SSH 客户端，提供图形化终端操作界面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="第一部分电脑端配置"&gt;第一部分：电脑端配置&lt;/h2&gt;
+&lt;h3 id="1-安装-openssh-server"&gt;1. 安装 OpenSSH Server&lt;/h3&gt;
+&lt;p&gt;先检查系统是否已有 SSH 服务端。以&lt;strong&gt;管理员身份&lt;/strong&gt;打开 PowerShell，运行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-WindowsCapability -Online | Where-Object Name &lt;span style="color:#f92672"&gt;-like&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;OpenSSH.Server*&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果显示 &lt;code&gt;State : Installed&lt;/code&gt;，跳到第 2 步。如果报错或未安装，按以下方式手动安装：&lt;/p&gt;</description></item></channel></rss>

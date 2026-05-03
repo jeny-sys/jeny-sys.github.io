@@ -2,11 +2,12 @@
 
 /* 基础重置和变量 */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --text-light: #666666;
-  --accent-color: #0066cc;
-  --border-color: #e0e0e0;
+  --bg-color: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-color: #e0e0e0;
+  --text-light: #b0b0b0;
+  --accent-color: #4da6ff;
+  --border-color: #404040;
   --sidebar-width: 280px;
 }
 
@@ -121,17 +122,19 @@ body {
 }
 
 .tag-cloud .tag {
-  background-color: #f5f5f5;
+  background-color: var(--bg-secondary);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.875rem;
   color: var(--text-light);
   text-decoration: none;
+  border: 1px solid var(--border-color);
 }
 
 .tag-cloud .tag:hover {
   background-color: var(--accent-color);
   color: white;
+  border-color: var(--accent-color);
 }
 
 /* 首页样式 */
@@ -217,11 +220,12 @@ body {
 }
 
 .post-item .tag {
-  background-color: #f5f5f5;
+  background-color: var(--bg-secondary);
   padding: 2px 6px;
   border-radius: 3px;
   font-size: 0.75rem;
   color: var(--text-light);
+  border: 1px solid var(--border-color);
 }
 
 /* 文章详情样式 */
@@ -262,11 +266,12 @@ body {
 }
 
 .post-content pre {
-  background-color: #f5f5f5;
+  background-color: var(--bg-secondary);
   padding: 15px;
   border-radius: 5px;
   overflow-x: auto;
   margin: 20px 0;
+  border: 1px solid var(--border-color);
 }
 
 .post-content code {
