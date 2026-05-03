@@ -1,8 +1,8 @@
 # config.toml
-baseURL = "https://yourusername.github.io/"
+baseURL = "https://jeny-sys.github.io/"
 languageCode = "zh-cn"
 title = "个人技术博客"
-theme = ""
+# theme = ""
 
 [params]
   description = "分享编程经验、技术见解和项目成果"
