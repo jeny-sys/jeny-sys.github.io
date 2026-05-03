@@ -1,0 +1,13 @@
+{{- $pages := where .Site.RegularPages "Section" "posts" -}}
+[
+{{- range $index, $page := $pages -}}
+{{- if $index }},{{ end }}
+{
+  "title": "{{ .Title }}",
+  "date": "{{ .Date.Format "2006-01-02" }}",
+  "permalink": "{{ .Permalink }}",
+  "summary": "{{ .Summary | plainify | truncate 200 }}",
+  "content": "{{ .Plain | truncate 500 }}"
+}
+{{- end }}
+]
