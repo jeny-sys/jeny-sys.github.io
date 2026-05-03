@@ -1,78 +1,50 @@
 // static/js/main.js
 
-// 移动端菜单切换
-document.addEventListener('DOMContentLoaded', function() {
-    // 代码高亮（如果需要）
-    highlightCode();
-
-    // 平滑滚动
-    smoothScroll();
-
-    // 返回顶部按钮
-    backToTop();
+document.addEventListener('DOMContentLoaded', function () {
+  initMobileMenu();
+  initBackToTop();
+  initReadingProgress();
 });
 
-// 代码高亮函数
-function highlightCode() {
-    const codeBlocks = document.querySelectorAll('pre code');
-    codeBlocks.forEach(block => {
-        // 简单的代码高亮
-        const text = block.textContent;
-        // 这里可以添加更复杂的语法高亮逻辑
+// ── Mobile hamburger menu ──
+function initMobileMenu() {
+  var toggle = document.getElementById('menu-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', function () {
+    nav.classList.toggle('open');
+  });
+
+  // close when clicking a nav link
+  nav.querySelectorAll('.nav-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('open');
     });
+  });
 }
 
-// 平滑滚动
-function smoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
+// ── Back to top ──
+function initBackToTop() {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+
+  window.addEventListener('scroll', function () {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
-// 返回顶部按钮
-function backToTop() {
-    const backToTopBtn = document.createElement('button');
-    backToTopBtn.innerHTML = '↑';
-    backToTopBtn.className = 'back-to-top';
-    backToTopBtn.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 40px;
-        height: 40px;
-        background-color: var(--accent-color);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        display: none;
-        font-size: 18px;
-        z-index: 1000;
-    `;
+// ── Reading progress bar ──
+function initReadingProgress() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
 
-    document.body.appendChild(backToTopBtn);
-
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopBtn.style.display = 'block';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    });
-
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+  window.addEventListener('scroll', function () {
+    var docH = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = docH > 0 ? (window.scrollY / docH * 100) + '%' : '0%';
+  });
 }

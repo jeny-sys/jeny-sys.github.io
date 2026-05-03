@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on 个人技术博客</title><link>https://jeny-sys.github.io/tags/windows/</link><description>Recent content in Windows on 个人技术博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 03 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://jeny-sys.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>手机远程控制电脑完整教程 — SSH + Tailscale + Termius</title><link>https://jeny-sys.github.io/posts/ssh-remote-setup-guide/</link><pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate><guid>https://jeny-sys.github.io/posts/ssh-remote-setup-guide/</guid><description>&lt;h2 id="你会得到什么"&gt;你会得到什么&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on 个人技术博客</title><link>http://localhost:1313/tags/windows/</link><description>Recent content in Windows on 个人技术博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 03 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>手机远程控制电脑完整教程 — SSH + Tailscale + Termius</title><link>http://localhost:1313/posts/ssh-remote-setup-guide/</link><pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/ssh-remote-setup-guide/</guid><description>&lt;h2 id="你会得到什么"&gt;你会得到什么&lt;/h2&gt;
 &lt;p&gt;完成本教程后，你将拥有一个&lt;strong&gt;安全、稳定、零成本&lt;/strong&gt;的远程控制方案：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;随时随地连接&lt;/strong&gt;：不管电脑在哪，手机有网就能连&lt;/li&gt;
@@ -48,12 +48,5 @@
 &lt;h2 id="第一部分电脑端配置"&gt;第一部分：电脑端配置&lt;/h2&gt;
 &lt;h3 id="1-安装-openssh-server"&gt;1. 安装 OpenSSH Server&lt;/h3&gt;
 &lt;p&gt;先检查系统是否已有 SSH 服务端。以&lt;strong&gt;管理员身份&lt;/strong&gt;打开 PowerShell，运行：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-WindowsCapability -Online | Where-Object Name &lt;span style="color:#f92672"&gt;-like&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;OpenSSH.Server*&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;如果显示 &lt;code&gt;State : Installed&lt;/code&gt;，跳到第 2 步。如果报错或未安装，按以下方式手动安装：&lt;/p&gt;</description></item></channel></rss>
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-WindowsCapability -Online | Where-Object Name &lt;span style="color:#f92672"&gt;-like&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;OpenSSH.Server*&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果显示 &lt;code&gt;State : Installed&lt;/code&gt;，跳到第 2 步。如果报错或未安装，按以下方式手动安装：&lt;/p&gt;</description></item></channel></rss>
