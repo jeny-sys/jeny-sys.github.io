@@ -1,0 +1,32 @@
+# config.toml
+baseURL = "https://yourusername.github.io/"
+languageCode = "zh-cn"
+title = "个人技术博客"
+theme = ""
+
+[params]
+  description = "分享编程经验、技术见解和项目成果"
+  author = "Your Name"
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 3
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
