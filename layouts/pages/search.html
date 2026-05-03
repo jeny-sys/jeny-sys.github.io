@@ -1,0 +1,56 @@
+{{ define "main" }}
+<div class="search-page">
+    <h1>搜索文章</h1>
+    <div class="search-box">
+        <input type="text" id="search-input" placeholder="输入关键词搜索..." autocomplete="off">
+        <button id="search-button">搜索</button>
+    </div>
+    <div id="search-results"></div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var searchInput = document.getElementById('search-input');
+    var searchButton = document.getElementById('search-button');
+    var searchResults = document.getElementById('search-results');
+    var searchIndex = [];
+
+    fetch('/index.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) { searchIndex = data; });
+
+    function performSearch() {
+        var query = searchInput.value.trim().toLowerCase();
+        if (!query) { searchResults.innerHTML = ''; return; }
+
+        var results = searchIndex.filter(function(item) {
+            return item.title.toLowerCase().indexOf(query) !== -1 ||
+                   item.content.toLowerCase().indexOf(query) !== -1 ||
+                   item.summary.toLowerCase().indexOf(query) !== -1;
+        });
+
+        if (results.length === 0) {
+            searchResults.innerHTML = '<div class="no-results">没有找到相关文章</div>';
+            return;
+        }
+
+        var html = '';
+        results.forEach(function(item) {
+            html += '<article class="search-result">' +
+                '<h3><a href="' + item.permalink + '">' + item.title + '</a></h3>' +
+                '<time>' + item.date + '</time>' +
+                '<p>' + item.summary + '</p>' +
+                '</article>';
+        });
+        searchResults.innerHTML = html;
+    }
+
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') performSearch();
+    });
+
+    searchInput.focus();
+});
+</script>
+{{ end }}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="reading-progress" id="reading-progress"></div>
+    <div class="container">
+        {{ partial "header.html" . }}
+        <div class="main-content">
+            {{ partial "sidebar.html" . }}
+            <main class="content">
+                {{ block "main" . }}{{ end }}
+            </main>
+        </div>
+        {{ partial "footer.html" . }}
+    </div>
+    <button class="back-to-top" id="back-to-top" aria-label="返回顶部">↑</button>
+    <script src="/js/main.js"></script>
+</body>
+</html>

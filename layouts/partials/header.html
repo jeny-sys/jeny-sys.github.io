@@ -1,8 +1,8 @@
-<!-- layouts/partials/header.html -->
 <header class="site-header">
     <div class="header-content">
-        <a href="/" class="site-title">{{ .Site.Title }}</a>
-        <nav class="main-nav">
+        <a href="/" class="site-title"><span>{{ .Site.Title }}</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="菜单">☰</button>
+        <nav class="main-nav" id="main-nav">
             {{ range .Site.Menus.main }}
             <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">{{ .Name }}</a>
             {{ end }}
