@@ -1,0 +1,4 @@
+[{"title":"手机远程控制电脑完整教程 — SSH + Tailscale + Termius","date":"2026-05-03","permalink":"https://jeny-sys.github.io/posts/ssh-remote-setup-guide/","summary":"你会得到什么 完成本教程后，你将拥有一个安全、稳定、零成本的远程控制方案：
+随时随地连接：不管电脑在哪，手机有网就能连 端到端加密：WireGuard 协议，不暴露任何端口 完全免费：所有工具均为免费版本，无隐藏收费 前置条件 项目 要求 电脑系统 Windows 10（1809+）或 Windows 11 手机系统 iOS 15+ 或 Android 8+ 网络要求 电脑和手机各自能上网即可（不 …","content":"你会得到什么 完成本教程后，你将拥有一个安全、稳定、零成本的远程控制方案：
+随时随地连接：不管电脑在哪，手机有网就能连 端到端加密：WireGuard 协议，不暴露任何端口 完全免费：所有工具均为免费版本，无隐藏收费 前置条件 项目 要求 电脑系统 Windows 10（1809+）或 Windows 11 手机系统 iOS 15+ 或 Android 8+ 网络要求 电脑和手机各自能上网即可（不需要同一局域网） 管理员权限 安装 OpenSSH 需要管理员 PowerShell 账号准备 一个 Google / Microsoft / Apple / GitHub 账号（用于 Tailscale 登录） 整体架构 整个方案由三个组件组成，各司其职：
+手机 (Termius) → Tailscale (WireGuard 加密隧道) → 电脑 (OpenSSH Server) OpenSSH Server：电脑上的 SSH 服务端，提供远程终端访问能力 Tailscale：虚拟组网工具，让手机和电脑在任意网络下互通 Termius：手机上的 SSH 客户端，提供图形化终端操作界面 第一 …"}]
